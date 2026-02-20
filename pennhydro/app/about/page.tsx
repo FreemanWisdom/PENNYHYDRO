@@ -64,12 +64,13 @@ export default function AboutPage() {
                         </p>
                     </div>
                     <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl">
-                        <Image
-                            src="/1 (13).jpg"
-                            alt="Corporate Excellence"
-                            fill
-                            className="object-cover"
-                        />
+                            <Image
+                                src="/1 (13).jpg"
+                                alt="Corporate Excellence"
+                                fill
+                                loading="lazy"
+                                className="object-cover"
+                            />
                     </div>
                 </div>
             </Section>
@@ -186,6 +187,7 @@ export default function AboutPage() {
                                 src="/1 (14).jpg"
                                 alt="Team Working"
                                 fill
+                                loading="lazy"
                                 className="object-cover"
                             />
                             <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/80 to-transparent p-12 text-white">

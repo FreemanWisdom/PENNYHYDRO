@@ -77,6 +77,7 @@ export default function ProjectsGrid() {
                 src={src}
                 alt={`Project Image ${index + 1}`}
                 fill
+                loading="lazy"
                 className="object-cover"
                 sizes="(max-width: 640px) 85vw, (max-width: 1024px) 47vw, (max-width: 1280px) 31vw, 23vw"
               />

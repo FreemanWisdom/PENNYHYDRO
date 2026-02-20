@@ -11,7 +11,7 @@ export default function ContactPage() {
                     src="/1 (18).jpg"
                     alt="Contact Background"
                     fill
-                    priority
+                    loading="lazy"
                     className="object-cover opacity-85"
                 />
                 <div className="absolute inset-0 bg-brand-dark/45"></div>
@@ -97,6 +97,7 @@ export default function ContactPage() {
                     src="/1 (17).jpg"
                     alt="Map Location Visual"
                     fill
+                    loading="lazy"
                     className="object-cover opacity-70"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">

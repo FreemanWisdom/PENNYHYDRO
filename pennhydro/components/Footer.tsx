@@ -23,6 +23,7 @@ export default function Footer() {
                                     alt={`Partner Logo ${index + 1}`}
                                     width={100}
                                     height={50}
+                                    loading="lazy"
                                     className="h-10 w-auto opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                                 />
                             </div>
@@ -35,7 +36,7 @@ export default function Footer() {
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-16">
                     {/* Column 1: Company */}
                     <div>
-                        <Image src="/logo.png" alt="Logo" width={180} height={60} className="mb-6 brightness" />
+                        <Image src="/logo.png" alt="Logo" width={180} height={60} loading="eager" className="mb-6 brightness" />
                         <p className="text-slate-400 text-sm leading-relaxed">
                             PENNHYDRO-PELL OIL & GAS LIMITED is an indigenous company specialized in Civil Works, Dredging, and Marine Logistics.
                         </p>

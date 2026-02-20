@@ -92,6 +92,7 @@ export default function ServicesPage() {
                                 src={service.image}
                                 alt={service.title}
                                 fill
+                                loading="lazy"
                                 className="object-cover"
                             />
                         </div>
