@@ -64,7 +64,7 @@ export default function ContactForm() {
                     disabled={status === "sending" || status === "success"}
                     className={`w-full py-5 rounded border font-bold uppercase tracking-widest transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-primary/30 ${status === "success"
                             ? "bg-brand-dark border-brand-dark text-black"
-                            : "bg-brand-dark border-brand-dark text-white hover:bg-brand-primary hover:border-brand-primary hover:-translate-y-0.5 hover:shadow-lg"
+                            : "bg-brand-dark border-brand-dark text-black hover:bg-brand-primary hover:border-brand-primary hover:-translate-y-0.5 hover:shadow-lg"
                         } ${status === "sending" ? "cursor-wait opacity-90" : ""}`}
                 >
                     {status === "idle" && "Send Message"}

@@ -141,32 +141,6 @@ export default function Navbar() {
               </Link>
             ))}
           </div>
-
-          {/* CONTACT SECTION */}
-          <div className="px-6 pb-8 space-y-3 border-t border-slate-200 pt-6">
-            <Link
-              href="/contact"
-              onClick={() => setIsOpen(false)}
-              className="w-full block text-center bg-brand-dark text-white py-3 rounded-lg font-bold border-2 border-brand-dark hover:bg-brand-primary hover:border-brand-primary transition-all"
-            >
-              Get a Quote
-            </Link>
-
-            <a
-              href="tel:+2349047868943"
-              className="w-full block text-center py-3 rounded-lg border border-slate-300 font-semibold text-slate-700 hover:border-brand-primary hover:text-brand-primary transition-all"
-            >
-              (+234) 904 786 8943
-            </a>
-
-            <a
-              href="mailto:info@pennhydropell.com"
-              className="w-full block text-center py-3 rounded-lg border border-slate-300 font-semibold text-slate-700 hover:border-brand-primary hover:text-brand-primary transition-all"
-            >
-              info@pennhydropell.com
-            </a>
-          </div>
-
         </div>
       )}
     </>
