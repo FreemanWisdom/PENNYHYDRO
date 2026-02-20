@@ -13,7 +13,7 @@ export default function Footer() {
             <div className="border-t border-b border-slate-700 py-12 mb-16 bg-white/5">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h3 className="text-center text-xs font-bold tracking-[0.2em] text-slate-500 uppercase mb-8">
-                        Our Partners & Certifications
+                        Our Partners
                     </h3>
                     <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-8 items-center justify-items-center">
                         {footerLogos.map((logo, index) => (

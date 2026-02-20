@@ -79,31 +79,33 @@ export default function Home() {
       <ProjectsGrid />
 
       {/* CTA Section */}
-      <Section className="bg-brand-primary py-24">
-        <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-8">
-            Ready to Start Your Project with Us?
-          </h2>
-          <p className="text-white/85 leading-relaxed mb-8">
-            Our teams combine technical excellence with a superior understanding
-            of client needs and the environment in which our clients operate.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="px-10 py-5 bg-white text-brand-primary font-bold rounded shadow-xl transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-50 hover:shadow-2xl text-center"
-            >
-              Get Started Now
-            </Link>
-            <Link
-              href="tel:+2349047868943"
-              className="px-10 py-5 bg-transparent border-2 border-white text-white font-bold rounded transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-brand-primary hover:shadow-2xl text-center"
-            >
-              Call Support: (+234)9047868943
-            </Link>
+      <section className="bg-black py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-5xl !text-white font-black mb-8 drop-shadow-lg">
+              Ready to Start Your Project with Us?
+            </h2>
+            <p className="text-white font-bold italic leading-relaxed mb-8">
+              "Our teams combine technical excellence with a superior understanding
+              of client needs and the environment in which our clients operate."
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="px-10 py-5 bg-brand-dark border border-brand-dark text-white font-bold rounded shadow-xl transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:border-white hover:text-black hover:shadow-2xl text-center"
+              >
+                Get Started Now
+              </Link>
+              <Link
+                href="tel:+2349047868943"
+                className="px-10 py-5 bg-transparent border-2 border-white text-white font-bold rounded transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-black hover:shadow-2xl text-center"
+              >
+                Call Support: (+234) 904 786 8943
+              </Link>
+            </div>
           </div>
         </div>
-      </Section>
+      </section>
     </>
   );
 }

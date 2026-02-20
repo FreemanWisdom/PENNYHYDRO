@@ -37,7 +37,7 @@ export function SectionHeading({
     return (
         <div className={`mb-16 ${centered ? "text-center mx-auto" : ""} max-w-3xl`}>
             {subtitle && (
-                <span className={`block text-xs font-bold tracking-[0.2em] uppercase mb-3 ${inverse ? "text-brand-primary" : "text-brand-secondary"}`}>
+                <span className={`block text-xs font-bold tracking-[0.2em] uppercase mb-3 ${inverse ? "text-white" : "text-brand-secondary"}`}>
                     {subtitle}
                 </span>
             )}

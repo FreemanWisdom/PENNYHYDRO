@@ -13,31 +13,48 @@ export default function Hero() {
                     priority
                     className="object-cover"
                 />
-                <div className="absolute inset-0 bg-brand-dark/65"></div>
+                <div className="absolute inset-0 bg-brand-dark/70"></div>
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-                <div className="max-w-4xl">
-                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5 leading-tight animate-fade-in-up [animation-delay:200ms]">
-                        Delivering Your Vision from concept to completion
+                <div className="max-w-5xl">
+                    {/* Eyebrow label */}
+                    <p className="font-heading text-white font-bold uppercase tracking-[0.25em] text-xs sm:text-sm mb-5 animate-fade-in-up [animation-delay:100ms]">
+                        Oil &amp; Gas · Civil Works · Marine Logistics
+                    </p>
+
+                    {/* Main headline — Barlow Condensed Black */}
+                    <h1
+                        className="font-barlow font-black uppercase leading-none tracking-tight mb-6 animate-fade-in-up [animation-delay:200ms]"
+                        style={{ fontSize: "clamp(2.2rem, 7vw, 6rem)" }}
+                    >
+                        <span className="text-white">Delivering Your Vision</span>
+                        <br />
+                        <span className="text-brand-primary">From Concept</span>
+                        <span className="text-white"> to Completion</span>
                     </h1>
-                    <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-brand-primary mb-8 leading-tight animate-fade-in-up [animation-delay:350ms]">
-                        Delivering innovation every step of the way.
+
+                    {/* Sub-headline */}
+                    <h2 className="font-heading text-xl sm:text-2xl lg:text-3xl font-semibold text-brand-secondary italic mb-8 leading-snug animate-fade-in-up [animation-delay:350ms]">
+                        Innovation at every step of the way.
                     </h2>
 
-                    <p className="text-base sm:text-lg text-slate-100 mb-10 leading-relaxed max-w-3xl animate-fade-in-up [animation-delay:500ms]">
-                        PENNHYDRO-PELL OIL & GAS LIMITED is dedicated to exceeding the expectations of every client by offering outstanding customer service, increased flexibility, and greater value, thus optimizing business functionality and improving operation efficiency.
+                    <p className="font-sans text-base sm:text-lg text-slate-200 mb-10 leading-relaxed max-w-3xl animate-fade-in-up [animation-delay:500ms]">
+                        PENNHYDRO-PELL OIL &amp; GAS LIMITED is dedicated to exceeding the expectations
+                        of every client by offering outstanding customer service, increased flexibility,
+                        and greater value — optimizing business functionality and improving operational efficiency.
                     </p>
+
                     <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up [animation-delay:650ms]">
                         <Link
                             href="/services"
-                            className="px-8 py-4 bg-white text-brand-dark border border-white font-bold rounded text-center transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:bg-slate-100"
+                            className="px-8 py-4 bg-brand-dark text-white border border-brand-dark font-bold rounded text-center transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:bg-brand-primary hover:border-brand-primary"
                         >
                             Our Services
                         </Link>
                         <Link
                             href="/about"
-                            className="px-8 py-4 bg-transparent text-white border border-white/50 backdrop-blur-sm font-bold rounded text-center transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-brand-dark hover:shadow-xl"
+                            className="px-8 py-4 bg-brand-dark text-white border border-brand-dark font-bold rounded text-center transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-primary hover:border-brand-primary hover:shadow-xl"
                         >
                             About Us
                         </Link>

@@ -155,9 +155,7 @@ export default function AboutPage() {
                             <h4 className="font-bold text-slate-900 mb-2 group-hover:text-brand-primary transition-colors">
                                 {strength.title}
                             </h4>
-                            <p className="text-slate-600 text-sm leading-relaxed">
-                                {strength.desc}
-                            </p>
+                            
                         </div>
                     ))}
                 </div>

@@ -49,7 +49,7 @@ export default function ProjectsGrid() {
           <button
             type="button"
             onClick={() => scrollProjects("left")}
-            className="h-11 w-11 rounded-full border border-slate-300 bg-white text-slate-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-primary hover:text-brand-primary hover:shadow-lg"
+            className="h-11 w-11 rounded-full border border-brand-dark bg-brand-dark text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-primary hover:bg-brand-primary hover:shadow-lg"
             aria-label="Scroll projects left"
           >
             <span aria-hidden="true">&lt;</span>
@@ -57,7 +57,7 @@ export default function ProjectsGrid() {
           <button
             type="button"
             onClick={() => scrollProjects("right")}
-            className="h-11 w-11 rounded-full border border-slate-300 bg-white text-slate-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-primary hover:text-brand-primary hover:shadow-lg"
+            className="h-11 w-11 rounded-full border border-brand-dark bg-brand-dark text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-primary hover:bg-brand-primary hover:shadow-lg"
             aria-label="Scroll projects right"
           >
             <span aria-hidden="true">&gt;</span>

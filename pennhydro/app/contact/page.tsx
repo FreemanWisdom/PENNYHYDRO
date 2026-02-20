@@ -78,7 +78,7 @@ export default function ContactPage() {
                             <h4 className="font-bold text-slate-800 uppercase tracking-widest text-xs mb-6">Social Media</h4>
                             <div className="flex gap-4">
                                 {["Facebook", "Twitter", "LinkedIn", "WhatsApp"].map((social) => (
-                                    <span key={social} className="px-4 py-2 bg-slate-100 text-slate-600 rounded text-sm hover:bg-brand-primary hover:text-white hover:-translate-y-0.5 hover:shadow-md transition-all duration-300 cursor-pointer">
+                                    <span key={social} className="px-4 py-2 bg-brand-dark text-white rounded text-sm font-semibold hover:bg-brand-primary hover:text-white hover:-translate-y-0.5 hover:shadow-md transition-all duration-300 cursor-pointer">
                                         {social}
                                     </span>
                                 ))}
@@ -100,9 +100,9 @@ export default function ContactPage() {
                     className="object-cover opacity-70"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="p-4 bg-white shadow-lg rounded-lg border border-slate-200 text-center">
-                        <p className="font-bold text-brand-dark">Our Headquarters</p>
-                        <p className="text-xs text-slate-500">No 9/11 Bishop Dimeri Street, Off Evo Road, GRA, Port Harcourt, Rivers, Nigeria</p>
+                    <div className="p-4 bg-brand-dark/80 shadow-lg rounded-lg border border-white/20 text-center text-white backdrop-blur-sm">
+                        <p className="font-bold text-white">Our Headquarters</p>
+                        <p className="text-xs text-white/80">No 9/11 Bishop Dimeri Street, Off Evo Road, GRA, Port Harcourt, Rivers, Nigeria</p>
                     </div>
                 </div>
             </div>
