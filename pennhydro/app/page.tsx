@@ -27,7 +27,7 @@ export default function Home() {
             <p className="text-slate-600 leading-relaxed">
               In our chosen markets, we are the leader in client satisfaction,
               professionalism, superior quality and innovation. We are the
-              architect of responsive and creative solutions to our clients'
+              architect of responsive and creative solutions to our clients&rsquo;
               benefit, compensation and human resources needs. Our teams combine
               technical excellence with a superior understanding of client needs
               and the environment in which our clients operate. We are committed
@@ -86,8 +86,8 @@ export default function Home() {
               Ready to Start Your Project with Us?
             </h2>
             <p className="text-white font-bold italic leading-relaxed mb-8">
-              "Our teams combine technical excellence with a superior understanding
-              of client needs and the environment in which our clients operate."
+              &ldquo;Our teams combine technical excellence with a superior understanding
+              of client needs and the environment in which our clients operate.&rdquo;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -109,3 +109,4 @@ export default function Home() {
     </>
   );
 }
+

@@ -1,15 +1,18 @@
 import { Section, SectionHeading } from "@/components/UI";
 import Image from "next/image";
+import { policyPageHeaderImage, policyPageQualityImage } from "@/lib/images";
 
 export default function PolicyPage() {
     return (
         <div className="pt-20">
             <Section className="relative overflow-hidden py-24 md:py-32">
                 <Image
-                    src="/1 (11).jpg"
+                    src={policyPageHeaderImage}
                     alt="Policy header background"
                     fill
                     priority
+                    sizes="100vw"
+                    placeholder="blur"
                     className="object-cover"
                 />
                 <div className="absolute inset-0 bg-brand-dark/70"></div>
@@ -72,10 +75,14 @@ export default function PolicyPage() {
                             </div>
                             <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl">
                                 <Image
-                                    src="/quality.png"
+                                    src={policyPageQualityImage}
                                     alt="Quality Policy"
-                                    fill
-                                    className="object-cover"
+                                    width={policyPageQualityImage.width}
+                                    height={policyPageQualityImage.height}
+                                    loading="lazy"
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                    placeholder="blur"
+                                    className="h-full w-full object-cover"
                                 />
                             </div>
 

@@ -1,5 +1,10 @@
 import { Section, SectionHeading } from "@/components/UI";
 import Image from "next/image";
+import {
+    aboutPageBodyImage,
+    aboutPageHeaderImage,
+    aboutPageTeamImage,
+} from "@/lib/images";
 
 export default function AboutPage() {
     return (
@@ -7,10 +12,12 @@ export default function AboutPage() {
             {/* Header */}
             <Section className="relative overflow-hidden py-24 md:py-32">
                 <Image
-                    src="/1 (12).jpg"
+                    src={aboutPageHeaderImage}
                     alt="About header background"
                     fill
                     priority
+                    sizes="100vw"
+                    placeholder="blur"
                     className="object-cover"
                 />
                 <div className="absolute inset-0 bg-brand-dark/70"></div>
@@ -65,11 +72,14 @@ export default function AboutPage() {
                     </div>
                     <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl">
                             <Image
-                                src="/1 (13).jpg"
+                                src={aboutPageBodyImage}
                                 alt="Corporate Excellence"
-                                fill
+                                width={aboutPageBodyImage.width}
+                                height={aboutPageBodyImage.height}
                                 loading="lazy"
-                                className="object-cover"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                placeholder="blur"
+                                className="h-full w-full object-cover"
                             />
                     </div>
                 </div>
@@ -184,16 +194,19 @@ export default function AboutPage() {
                         </p>
                         <div className="relative h-[400px] w-full max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl">
                             <Image
-                                src="/1 (14).jpg"
+                                src={aboutPageTeamImage}
                                 alt="Team Working"
-                                fill
+                                width={aboutPageTeamImage.width}
+                                height={aboutPageTeamImage.height}
                                 loading="lazy"
-                                className="object-cover"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                placeholder="blur"
+                                className="h-full w-full object-cover"
                             />
                             <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/80 to-transparent p-12 text-white">
                                 <p className="text-xl font-bold italic">
-                                    "Quality and customers’ satisfaction are enshrined in all our
-                                    activities"
+                                    &ldquo;Quality and customers’ satisfaction are enshrined in all our
+                                    activities&rdquo;
                                 </p>
                             </div>
                         </div>
@@ -218,11 +231,11 @@ export default function AboutPage() {
                         </p>
                         <div className="p-6 bg-white/5 rounded-lg border border-white/10 italic text-slate-500">
                             <p>
-                                "Whatever the primary motivation for seeking large-scale
+                                &ldquo;Whatever the primary motivation for seeking large-scale
                                 integrated solutions from a single supplier – whether the
                                 reduction of complexity, interfaces and costs, or tight start-up
                                 schedules the Peacot oil and gas portfolio reflects a set of
-                                shared values ensuring maximum return."
+                                shared values ensuring maximum return.&rdquo;
                             </p>
                         </div>
                     </div>
@@ -231,3 +244,4 @@ export default function AboutPage() {
         </div>
     );
 }
+

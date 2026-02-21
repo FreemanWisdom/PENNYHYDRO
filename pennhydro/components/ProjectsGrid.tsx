@@ -1,31 +1,50 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Section, SectionHeading } from "./UI";
-
-const projectImages = [
-  "/1 (1).jpg",
-  "/1 (2).jpg",
-  "/1 (3).jpg",
-  "/1 (4).jpg",
-  "/1 (5).jpg",
-  "/1 (6).jpg",
-  "/1 (7).jpg",
-  "/1 (8).jpg",
-  "/1 (9).jpg",
-  "/1 (11).jpg",
-  "/1 (12).jpg",
-  "/1 (13).jpg",
-  "/1 (14).jpg",
-  "/1 (15).jpg",
-  "/1 (16).jpg",
-  "/1 (17).jpg",
-  "/1 (18).jpg",
-];
+import { projectGalleryImages } from "@/lib/images";
 
 export default function ProjectsGrid() {
   const trackRef = useRef<HTMLDivElement>(null);
+  const slideRefs = useRef<Array<HTMLDivElement | null>>([]);
+  const [visibleSlides, setVisibleSlides] = useState<Set<number>>(
+    () => new Set([0, 1, 2])
+  );
+
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        setVisibleSlides((currentVisibleSlides) => {
+          const nextVisibleSlides = new Set(currentVisibleSlides);
+          for (const entry of entries) {
+            if (!entry.isIntersecting) continue;
+            const slideIndex = Number(
+              (entry.target as HTMLElement).dataset.slideIndex
+            );
+            if (Number.isFinite(slideIndex)) {
+              nextVisibleSlides.add(slideIndex);
+            }
+          }
+          return nextVisibleSlides;
+        });
+      },
+      {
+        root: track,
+        rootMargin: "60% 0px",
+        threshold: 0.01,
+      }
+    );
+
+    slideRefs.current.forEach((slideRef) => {
+      if (slideRef) observer.observe(slideRef);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   const scrollProjects = (direction: "left" | "right") => {
     if (!trackRef.current) return;
@@ -49,7 +68,7 @@ export default function ProjectsGrid() {
           <button
             type="button"
             onClick={() => scrollProjects("left")}
-            className="h-11 w-11 rounded-full border border-brand-dark bg-brand-dark text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-primary hover:bg-brand-primary hover:shadow-lg"
+            className="h-11 w-11 rounded-full border border-brand-dark bg-brand-dark text-black transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-primary hover:bg-brand-primary hover:shadow-lg"
             aria-label="Scroll projects left"
           >
             <span aria-hidden="true">&lt;</span>
@@ -68,20 +87,30 @@ export default function ProjectsGrid() {
           ref={trackRef}
           className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
         >
-          {projectImages.map((src, index) => (
+          {projectGalleryImages.map((image, index) => (
             <div
               key={index}
+              ref={(element) => {
+                slideRefs.current[index] = element;
+              }}
+              data-slide-index={index}
               className="relative h-64 min-w-[85%] sm:min-w-[47%] lg:min-w-[31%] xl:min-w-[23%] overflow-hidden rounded-lg snap-start shadow-sm"
             >
-              <Image
-                src={src}
-                alt={`Project Image ${index + 1}`}
-                fill
-                loading="lazy"
-                className="object-cover"
-                sizes="(max-width: 640px) 85vw, (max-width: 1024px) 47vw, (max-width: 1280px) 31vw, 23vw"
-              />
-              <div className="absolute inset-0 bg-brand-dark/0 hover:bg-brand-dark/25 transition-colors duration-300" />
+              {visibleSlides.has(index) ? (
+                <Image
+                  src={image}
+                  alt={`Project Image ${index + 1}`}
+                  width={image.width}
+                  height={image.height}
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  placeholder="blur"
+                  className="h-full w-full object-cover"
+                />
+              ) : (
+                <div className="h-full w-full bg-slate-200" />
+              )}
+              <div className="absolute inset-0 bg-brand-dark/0 transition-colors duration-300" />
             </div>
           ))}
         </div>

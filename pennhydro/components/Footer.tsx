@@ -1,10 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-
-const footerLogos = [
-    "/FOOTER1.png", "/FOOTER2.png", "/FOOTER3.png", "/FOOTER4.png",
-    "/FOOTER5.png", "/FOOTER6.png", "/FOOTER7.png", "/FOOTER8.png"
-];
+import { brandLogoImage, partnerLogos } from "@/lib/images";
 
 export default function Footer() {
     return (
@@ -16,7 +12,7 @@ export default function Footer() {
                         Our Partners
                     </h3>
                     <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-8 items-center justify-items-center">
-                        {footerLogos.map((logo, index) => (
+                        {partnerLogos.map((logo, index) => (
                             <div key={index} className="flex-shrink-0">
                                 <Image
                                     src={logo}
@@ -24,6 +20,8 @@ export default function Footer() {
                                     width={100}
                                     height={50}
                                     loading="lazy"
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                    placeholder="blur"
                                     className="h-10 w-auto opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                                 />
                             </div>
@@ -36,7 +34,16 @@ export default function Footer() {
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-16">
                     {/* Column 1: Company */}
                     <div>
-                        <Image src="/logo.png" alt="Logo" width={180} height={60} loading="eager" className="mb-6 brightness" />
+                        <Image
+                            src={brandLogoImage}
+                            alt="Logo"
+                            width={180}
+                            height={60}
+                            loading="lazy"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            placeholder="blur"
+                            className="mb-6 brightness"
+                        />
                         <p className="text-slate-400 text-sm leading-relaxed">
                             PENNHYDRO-PELL OIL & GAS LIMITED is an indigenous company specialized in Civil Works, Dredging, and Marine Logistics.
                         </p>

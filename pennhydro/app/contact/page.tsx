@@ -1,6 +1,7 @@
 import { Section, SectionHeading } from "@/components/UI";
 import ContactForm from "@/components/ContactForm";
 import Image from "next/image";
+import { contactPageHeaderImage, contactPageMapImage } from "@/lib/images";
 
 export default function ContactPage() {
     return (
@@ -8,10 +9,12 @@ export default function ContactPage() {
             {/* Background with high visibility image */}
             <div className="relative bg-brand-dark py-24 overflow-hidden">
                 <Image
-                    src="/1 (18).jpg"
+                    src={contactPageHeaderImage}
                     alt="Contact Background"
                     fill
-                    loading="lazy"
+                    priority
+                    sizes="100vw"
+                    placeholder="blur"
                     className="object-cover opacity-85"
                 />
                 <div className="absolute inset-0 bg-brand-dark/45"></div>
@@ -94,11 +97,14 @@ export default function ContactPage() {
             {/* Map Placeholder or Visual */}
             <div className="h-[400px] bg-slate-200 relative overflow-hidden">
                 <Image
-                    src="/1 (17).jpg"
+                    src={contactPageMapImage}
                     alt="Map Location Visual"
-                    fill
+                    width={contactPageMapImage.width}
+                    height={contactPageMapImage.height}
                     loading="lazy"
-                    className="object-cover opacity-70"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    placeholder="blur"
+                    className="h-full w-full object-cover opacity-70"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
                     <div className="p-4 bg-brand-dark/80 shadow-lg rounded-lg border border-white/20 text-center text-white backdrop-blur-sm">

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { brandLogoImage } from "@/lib/images";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -44,12 +45,14 @@ export default function Navbar() {
             {/* LOGO */}
             <Link href="/" className="flex items-center">
               <Image
-                src="/logo.png"
+                src={brandLogoImage}
                 alt="Pennhydro-Pell Logo"
                 width={280}
                 height={90}
                 className="h-14 w-auto"
                 priority
+                sizes="(max-width: 768px) 220px, 280px"
+                placeholder="blur"
               />
             </Link>
 
@@ -116,11 +119,14 @@ export default function Navbar() {
           {/* LOGO CENTERED */}
           <div className="flex flex-col items-center pt-16 pb-6 border-b border-slate-200">
             <Image
-              src="/logo.png"
+              src={brandLogoImage}
               alt="Pennhydro-Pell Logo"
               width={220}
               height={80}
               className="h-14 w-auto"
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              placeholder="blur"
             />
           </div>
 

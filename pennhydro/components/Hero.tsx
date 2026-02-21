@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { homePageHeroImage } from "@/lib/images";
 
 export default function Hero() {
     return (
@@ -7,10 +8,12 @@ export default function Hero() {
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/1 (10).jpg"
+                    src={homePageHeroImage}
                     alt="Pennhydro-Pell Corporate Hero"
                     fill
                     priority
+                    sizes="100vw"
+                    placeholder="blur"
                     className="object-cover"
                 />
                 <div className="absolute inset-0 bg-brand-dark/70"></div>

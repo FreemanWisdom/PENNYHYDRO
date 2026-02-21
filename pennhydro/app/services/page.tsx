@@ -1,5 +1,12 @@
 import { Section, SectionHeading } from "@/components/UI";
 import Image from "next/image";
+import type { StaticImageData } from "next/image";
+import {
+    servicesPageCivilImage,
+    servicesPageDredgingImage,
+    servicesPageHeaderImage,
+    servicesPageLogisticsImage,
+} from "@/lib/images";
 
 const allServices = [
     {
@@ -14,7 +21,7 @@ const allServices = [
             "Bridges rehabilitation",
             "Culverts installations",
         ],
-        image: "/1 (1).jpg",
+        image: servicesPageCivilImage,
     },
     {
         id: "dredging",
@@ -27,7 +34,7 @@ const allServices = [
             "Wastewater treatment plants maintenance",
             "Sludge lagoon cleaning",
         ],
-        image: "/1 (4).jpg",
+        image: servicesPageDredgingImage,
     },
     {
         id: "logistics",
@@ -40,19 +47,28 @@ const allServices = [
             "Scarcity solution services",
             "Retainership/Contract agreements with vessel owners",
         ],
-        image: "/1 (16).jpg",
+        image: servicesPageLogisticsImage,
     },
-];
+] satisfies Array<{
+    id: string;
+    title: string;
+    subtitle: string;
+    description: string;
+    features: string[];
+    image: StaticImageData;
+}>;
 
 export default function ServicesPage() {
     return (
         <div className="pt-20">
             <Section className="relative overflow-hidden py-24 md:py-32">
                 <Image
-                    src="/1 (15).jpg"
+                    src={servicesPageHeaderImage}
                     alt="Services header background"
                     fill
                     priority
+                    sizes="100vw"
+                    placeholder="blur"
                     className="object-cover"
                 />
                 <div className="absolute inset-0 bg-brand-dark/70"></div>
@@ -91,9 +107,12 @@ export default function ServicesPage() {
                             <Image
                                 src={service.image}
                                 alt={service.title}
-                                fill
+                                width={service.image.width}
+                                height={service.image.height}
                                 loading="lazy"
-                                className="object-cover"
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                placeholder="blur"
+                                className="h-full w-full object-cover"
                             />
                         </div>
                     </div>
