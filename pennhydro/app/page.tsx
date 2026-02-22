@@ -20,7 +20,7 @@ export default function Home() {
           <div className="bg-slate-50 border border-slate-200 rounded-xl p-8 md:p-10">
             <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center">
               <span className="w-8 h-8 rounded-full bg-brand-primary/10 text-brand-primary flex items-center justify-center mr-3 text-sm">
-                01
+                •
               </span>
               Our Vision
             </h3>
@@ -38,7 +38,7 @@ export default function Home() {
           <div className="bg-white border border-slate-200 rounded-xl p-8 md:p-10">
             <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center">
               <span className="w-8 h-8 rounded-full bg-brand-secondary/10 text-brand-secondary flex items-center justify-center mr-3 text-sm">
-                02
+                 •
               </span>
               Our Mission
             </h3>
