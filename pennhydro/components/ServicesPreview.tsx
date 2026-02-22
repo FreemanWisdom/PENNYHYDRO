@@ -55,7 +55,7 @@ export default function ServicesPreview() {
             <div className="mt-16 text-center">
                 <Link
                     href="/services"
-                    className="inline-block px-10 py-4 border border-brand-dark bg-brand-dark text-white font-bold rounded transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-primary hover:border-brand-primary hover:text-white hover:shadow-xl"
+                    className="px-8 py-4 bg-brand-dark text-black border border-brand-dark font-bold rounded text-center transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:bg-brand-primary hover:border-brand-primary"
                 >
                     View All Services
                 </Link>

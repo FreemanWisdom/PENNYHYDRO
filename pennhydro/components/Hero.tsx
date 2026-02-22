@@ -23,7 +23,7 @@ export default function Hero() {
                 <div className="max-w-5xl">
                     {/* Eyebrow label */}
                     <p className="font-heading text-white font-bold uppercase tracking-[0.25em] text-xs sm:text-sm mb-5 animate-fade-in-up [animation-delay:100ms]">
-                        Oil &amp; Gas · Civil Works · Marine Logistics
+                        Civil Works · Marine Logistics
                     </p>
 
                     {/* Main headline — Barlow Condensed Black */}
@@ -33,7 +33,7 @@ export default function Hero() {
                     >
                         <span className="text-white">Delivering Your Vision</span>
                         <br />
-                        <span className="text-brand-primary">From Concept</span>
+                        <span style={{ color: "#ff9000" }}>From Concept</span>
                         <span className="text-white"> to Completion</span>
                     </h1>
 
@@ -53,13 +53,13 @@ export default function Hero() {
                             href="/services"
                             className="px-8 py-4 bg-brand-dark text-white border border-brand-dark font-bold rounded text-center transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:bg-brand-primary hover:border-brand-primary"
                         >
-                            Our Services
+                            What We Do
                         </Link>
                         <Link
-                            href="/about"
+                            href="/contact"
                             className="px-8 py-4 bg-brand-dark text-white border border-brand-dark font-bold rounded text-center transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-primary hover:border-brand-primary hover:shadow-xl"
                         >
-                            About Us
+                            Contact Us
                         </Link>
                     </div>
                 </div>
