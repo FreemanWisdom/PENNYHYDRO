@@ -14,6 +14,7 @@ export default function Footer() {
                     <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-9 gap-4 sm:gap-6 lg:gap-8 items-center justify-items-center">
                         {partnerLogos.map((logo, index) => {
                             const isNineteenthLogo = index === partnerLogos.length - 1;
+                            const hasStaticBlur = typeof logo !== "string";
 
                             return (
                                 <div
@@ -27,7 +28,7 @@ export default function Footer() {
                                         height={isNineteenthLogo ? 66 : 60}
                                         loading="lazy"
                                         sizes="(max-width: 640px) 33vw, (max-width: 1024px) 25vw, 120px"
-                                        placeholder="blur"
+                                        placeholder={hasStaticBlur ? "blur" : "empty"}
                                         className={`h-11 sm:h-10 w-auto opacity-100 sm:opacity-75 sm:hover:grayscale-0 sm:hover:opacity-100 transition-all duration-300 ${isNineteenthLogo ? "scale-110" : ""}`}
                                     />
                                 </div>

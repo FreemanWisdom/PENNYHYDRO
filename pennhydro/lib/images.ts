@@ -13,7 +13,6 @@ import footer5Logo from "@/public/FOOTER5.webp";
 import footer6Logo from "@/public/FOOTER6.webp";
 import footer7Logo from "@/public/FOOTER7.webp";
 import footer8Logo from "@/public/FOOTER8.webp";
-import footer9Logo from "@/public/1 (19).webp";
 import homeHeroImage from "@/public/1 (10).webp";
 import logoImage from "@/public/logo.webp";
 import policyHeaderImage from "@/public/1 (11).webp";
@@ -53,6 +52,7 @@ export const policyPageHeaderImage = policyHeaderImage;
 export const policyPageQualityImage = qualityImage;
 export const contactPageHeaderImage = contactHeaderImage;
 export const contactPageMapImage = contactMapImage;
+const footer9Logo = "/1 (19).gif";
 
 export const projectGalleryImages: StaticImageData[] = [
   project1Image,
@@ -74,7 +74,7 @@ export const projectGalleryImages: StaticImageData[] = [
   project18Image,
 ];
 
-export const partnerLogos: StaticImageData[] = [
+export const partnerLogos: Array<StaticImageData | string> = [
   footer1Logo,
   footer2Logo,
   footer3Logo,
