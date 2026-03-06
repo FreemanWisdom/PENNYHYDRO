@@ -11,21 +11,28 @@ export default function Footer() {
                     <h3 className="text-center text-xs font-bold tracking-[0.2em] text-slate-500 uppercase mb-8">
                         Our Partners
                     </h3>
-                    <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-8 items-center justify-items-center">
-                        {partnerLogos.map((logo, index) => (
-                            <div key={index} className="flex-shrink-0">
-                                <Image
-                                    src={logo}
-                                    alt={`Partner Logo ${index + 1}`}
-                                    width={100}
-                                    height={50}
-                                    loading="lazy"
-                                    sizes="(max-width: 768px) 100vw, 50vw"
-                                    placeholder="blur"
-                                    className="h-10 w-auto opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-                                />
-                            </div>
-                        ))}
+                    <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-9 gap-4 sm:gap-6 lg:gap-8 items-center justify-items-center">
+                        {partnerLogos.map((logo, index) => {
+                            const isNineteenthLogo = index === partnerLogos.length - 1;
+
+                            return (
+                                <div
+                                    key={index}
+                                    className="w-full max-w-[120px] sm:max-w-[130px] min-h-[64px] sm:min-h-[56px] px-3 py-2 rounded-md bg-white/10 sm:bg-transparent flex items-center justify-center"
+                                >
+                                    <Image
+                                        src={logo}
+                                        alt={`Partner Logo ${index + 1}`}
+                                        width={isNineteenthLogo ? 132 : 120}
+                                        height={isNineteenthLogo ? 66 : 60}
+                                        loading="lazy"
+                                        sizes="(max-width: 640px) 33vw, (max-width: 1024px) 25vw, 120px"
+                                        placeholder="blur"
+                                        className={`h-11 sm:h-10 w-auto opacity-100 sm:opacity-75 sm:hover:grayscale-0 sm:hover:opacity-100 transition-all duration-300 ${isNineteenthLogo ? "scale-110" : ""}`}
+                                    />
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </div>

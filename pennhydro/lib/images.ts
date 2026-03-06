@@ -13,6 +13,7 @@ import footer5Logo from "@/public/FOOTER5.webp";
 import footer6Logo from "@/public/FOOTER6.webp";
 import footer7Logo from "@/public/FOOTER7.webp";
 import footer8Logo from "@/public/FOOTER8.webp";
+import footer9Logo from "@/public/1 (19).webp";
 import homeHeroImage from "@/public/1 (10).webp";
 import logoImage from "@/public/logo.webp";
 import policyHeaderImage from "@/public/1 (11).webp";
@@ -82,4 +83,5 @@ export const partnerLogos: StaticImageData[] = [
   footer6Logo,
   footer7Logo,
   footer8Logo,
+  footer9Logo,
 ];
